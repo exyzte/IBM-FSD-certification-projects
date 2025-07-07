@@ -1,0 +1,5 @@
+const trackList = ["Paradisco", "vaiu", "Hazlo, niño"];
+
+const updatedPlaylist = trackList.filter(track => track.length > 4).map(track => `${track.toUpperCase()} 🔥`);
+
+console.log(updatedPlaylist);
