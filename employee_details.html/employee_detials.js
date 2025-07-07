@@ -1,8 +1,11 @@
 const employees = [
     { id: 1, name: 'David', age: 24, department: 'IT', salary: 80000 },
     { id: 2, name: 'Angel', age: 18, department: 'IT', salary: 80000 },
-    { id: 3, name: 'Mike', age: 28, department: 'IT', salary: 40000 },
-];
+    { id: 3, name: 'Ikee', age: 28, department: 'IT', salary: 40000 },
+    { id: 4, name: 'Daniel', age: 24, department: 'HR', salary: 80000 },
+    { id: 5, name: 'Angela', age: 18, department: 'HR', salary: 80000 },
+    { id: 6, name: 'Luisa', age: 28, department: 'HR', salary: 40000 },
+];  
 
 function displayEmployees() {
     const totalEmployees = employees.map((employee, index) => `p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}<p>`).join('');
@@ -39,12 +42,5 @@ function findEmployeeId(employeeId) {
         document.getElementById('employeeDelatils').innerHTML = 'no employee has been found with this ID';
 
     }
-}
+};
 
-    function findEmployee(employeeId) { 
-        const foundEmployee = employees.find(employee => employee.id === employeeId);
-        if (foundEmployee) {
-            document.getElementById('employeeDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name}</p>`;
-        }
-
-    }
