@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+}
+.skills, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.skills div, .projects div {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.recommendations {
+    margin-top: 20px;
+}
+.recommendations input, .recommendations button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.recommendations input {
+    width: 100%;
+    max-width: 400px;
+}
+.recommendations button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.recommendations button:hover {
+    background-color: #555;
+}
+.comments {
+    margin-top: 20px;
+}
+.comments div {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#about-me {
+    justify-content: center;
+    text-align: center;
+}
+
+.skills {
+    justify-content: center;
+    text-align: center;
+}
+@media (min-width: 800px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #0f5047;
+        color: #fff;
+        height: 80px;
+        
+    }
+    
+}
+
+
+li {
+    list-style: none;
+}
+
+.contact-info span {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+.nav-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: double underline;
+}
+
+
+
+    .contact-info {
+        margin-bottom: 10px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+
+.off-screen-menu {
+    background-color: rgb(34, 37, 49);
+    height: 100hv;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+.off-screen-menu.active {
+    right: 0;
+}   
+.hamburguer-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+}
+.-hamburguer-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #6f86ff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.hamburguer-menu span:nth-child(1) {
+    top: 25%
+}
+.hamburguer-menu span:nth-child(3) {
+    top: 50%;
+} 

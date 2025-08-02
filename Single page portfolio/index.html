@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="contact-info">
+            <ul>
+            <li><span><i class="fas fa-user"></i> David Cicery</span></li>
+            <li><span><i class="fas fa-envelope"></i> david.cicery@example.com</span></li>
+            <li><span><i class="fas fa-phone"></i> +1234567890</span></li>
+            </ul>
+        </div>
+        <div class="nav-links">
+            <a href="#about-me">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#recommendations">Recommendations</a>
+        </div>
+    </nav>
+    <div class="off-screen-menu">
+        <ul>
+            <li>About Me</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Recommendations</li>
+        </ul>
+    </div>
+    <div id="hamburguerr-menu">
+        <div class="hamburguer-menu">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+        </div>
+    </div>
+    
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <section id="about-me">
+        <h2>Hi, I'm David Cicery! </h2>
+        <h2>About Me</h2>
+        <p>Hello! I'm David Cicery, passionate developer with a love for creating beautiful and functional web applications.
+            I am on my way to becoming a full stack developer and I enjoy learning modern technologies to build innovative solutions.</p>
+        </p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>React</div>
+            <div>Bootstrap</div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div>Project 1</div>
+            <div>Project 2</div>
+            <div>Project 3</div>
+        </div>
+    </section>
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+        <div class="recommendations">
+            <input type="text" id="recommendation-input" placeholder="Write your recommendation (max 200 characters)" maxlength="200">
+            <button onclick="addRecommendation()">Submit</button>
+        </div>
+        <div class="comments" id="comments-section">
+            <!-- Recommendations will appear here -->
+        </div>
+    </section>
+    <script>
+        function addRecommendation() {
+            const input = document.getElementById('recommendation-input');
+            const commentsSection = document.getElementById('comments-section');
+            const commentText = input.value.trim();
+
+            if (commentText) {
+                const commentDiv = document.createElement('div');
+                commentDiv.textContent = commentText;
+                commentsSection.appendChild(commentDiv);
+                input.value = '';
+            } else {
+                alert('Please enter a valid recommendation.');
+            }
+        }
+    </script>
+</body>
+</html>

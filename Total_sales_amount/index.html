@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Sales Calculator</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Total Sales Calculator</h1>
+        <form id="sales-form">
+            <div class="form-group">
+                <label for="item">Item Name</label>
+                <input type="text" class="form-control" id="item" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="original-price">Original Value</label>
+                <input type="number" class="form-control" id="original-price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Commercial Value (Price)</label>
+                <input type="number" class="form-control" id="price" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Item</button>
+        </form>
+        <h2 class="mt-4">Items List</h2>
+        <ul id="items-list" class="list-group"></ul>
+        <h3 class="mt-4">Total Sales: $<span id="total-sales">0.00</span></h3>
+        <h3>Total Profit: $<span id="total-profit">0.00</span></h3>
+    </div>
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+    body {
+        background-color: #f8f9fa;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    h1, h2, h3 {
+        color: #343a40;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+    .btn-primary:active {
+        transform: scale(0.95);
+    }
+    ul#items-list {
+        list-style: none;
+        padding: 0;
+    }
+    ul#items-list li {
+        text-align: left;
+    }
+</style>
+<script>
+    document.getElementById('sales-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const item = document.getElementById('item').value;
+        const quantity = parseInt(document.getElementById('quantity').value.trim());
+        const originalPrice = parseFloat(document.getElementById('original-price').value.trim());
+        const price = parseFloat(document.getElementById('price').value.trim());
+
+        if (!item.trim() || isNaN(quantity) || isNaN(originalPrice) || isNaN(price)) {
+            alert('Please fill out all fields correctly.');
+            return;
+        }
+
+        const profitPerUnit = price - originalPrice;
+        const totalProfit = profitPerUnit * quantity;
+        const total = quantity * price;
+
+        const listItem = document.createElement('li');
+        listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+        listItem.innerHTML = `
+            ${item} - Quantity: ${quantity}, Price: $${price.toFixed(2)}, Profit/Unit: $${profitPerUnit.toFixed(2)}, Total Profit: $${totalProfit.toFixed(2)}
+            <span class="badge badge-primary badge-pill">$${total.toFixed(2)}</span>
+        `;
+
+        document.getElementById('items-list').appendChild(listItem);
+
+        const totalSalesElement = document.getElementById('total-sales');
+        const currentTotal = parseFloat(totalSalesElement.textContent);
+        totalSalesElement.textContent = (currentTotal + total).toFixed(2);
+
+        const totalProfitElement = document.getElementById('total-profit');
+        const currentProfit = parseFloat(totalProfitElement.textContent) || 0;
+        totalProfitElement.textContent = (currentProfit + totalProfit).toFixed(2);
+
+        document.getElementById('sales-form').reset();
+    }); 
+</script>
+</body>
+</html>
+<!-- This code creates a simple sales calculator that allows users to input item details, calculates total sales and profit, and displays the results in a list. -->
