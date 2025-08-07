@@ -1,4 +1,5 @@
 function multiply() {
+    
     // Get user input from input fields
     let num1 = parseInt(document.getElementById('input1').value);
     let num2 = parseInt(document.getElementById('input2').value);
@@ -64,7 +65,7 @@ function add() {
     }
     function displayResult(result) {
         const resultElement = document.getElementById('result');
-        resultElement.textContent = `tThe result is ${result}`;
+        resultElement.textContent = `The result is ${result}`;
     }
 
 }
@@ -88,3 +89,77 @@ function subtract() {
         resultElement.innerText = `The result is ${result}`;
     }
 }
+
+function clearFields() {
+    document.getElementById('input1').value = '';
+    document.getElementById('input2').value = '';
+    document.getElementById('result').innerText = '';
+    document.getElementById('input1').focus();
+    document.getElementById('inputs').innerText = '';
+    document.getElementById('result').innerText = '';
+}
+*/
+
+ //arithmetic operation within the same function
+ /*
+function performOperation(operator) {
+    const input = parseInt(document.getElementById('input1).value);
+    const input2 = parseInt(document.getElementById('input2).value);
+    let result = 0;
+    if (isNaN(input1) || isNaN(input2)) {
+        result = 'Please enter a valid number';
+        }
+    else {
+        result = operator === 'multiply' ? input1 * input2 :
+        operator === 'add' ? input1 + input2 :
+        operator === 'subtract' ? input1 - input2 :
+        operator === 'divide' ? (input2 !== 0 ? input1 / input2 : 'Cannot divide by zero') :
+        'Invalid operation';
+        }
+
+    document.getElementById('result').textContent = result;
+
+
+    
+
+
+
+
+
+
+// copilot's suggestion for a single operation function
+function performOperation(operator) {
+    const input1 = parseFloat(document.getElementById('input1').value);
+    const input2 = parseFloat(document.getElementById('input2').value);
+    let result;
+
+    if (isNaN(input1) || isNaN(input2)) {
+        result = "Please enter valid numbers.";
+    } else {
+        switch (operator) {
+            case 'multiply':
+                result = input1 * input2;
+                break;
+            case 'add':
+                result = input1 + input2;
+                break;
+            case 'subtract':
+                result = input1 - input2;
+                break;
+            case 'divide':
+                result = input2 !== 0 ? input1 / input2 : "Cannot divide by zero.";
+                break;
+            default:
+                result = "Invalid operation.";
+        }
+    }
+
+    document.getElementById('result').textContent = result;
+}
+
+function clearFields() {
+    document.getElementById('input1').value = '';
+    document.getElementById('input2').value = '';
+    document.getElementById('result').textContent = '';
+}
+*/

@@ -3,19 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Debugging Example</title>
+    <link rel="stylesheet" href="./debug_code.css">
 </head>
 <body>
-    <h1>Perform Operation</h1>
-    <label for="input1">Enter Number 1:</label>
-    <input type="number" id="input1"><br><br>
-    <label for="input2">Enter Number 2:</label>
-    <input type="number" id="input2"><br><br>
-    <button onclick="multiply()">Multiply</button>
-    <button onclick="add()">Add</button>
-    <button onclick="subtract()">Subtract</button>
-    <button onclick="divide()">Divide</button>
-
-   <p id="result"></p>
+    <div class="calculator-container">
+    <h1 class="title">Simple Calculator</h1>
+    <p id="inputs" class="inputs"></p>
+    <label for="input1" class="label">Number 1:</label>
+    <input type="number" id="input1" class="input-field"><br>
+    <label for="input2" class="label">Number 2:</label> 
+    <input type="number" id="input2" class="input-field"><br>
+     
+    <div class="button-container">
+        <button class="operation-button" onclick="multiply()">x</button>
+        <button class="operation-button" onclick="add()">+</button>
+        <button class="operation-button" onclick="subtract()">-</button>
+        <button class="operation-button" onclick="divide()">%</button>
+        <button class="clear-button" onclick="clearFields()">C</button>
+    </div>
+    </div>
+    <!--   
+    <div class="character-container">
+        <div class="first-row">
+            <button class="number-button" onclick="appendNumber('1')">1</button>
+            <button class="number-button" onclick="appendNumber('2')">2</button>
+            <button class="number-button" onclick="appendNumber('3')">3</button>
+        </div>
+        <br>
+        <div class="second-row">
+            <button class="number-button" onclick="appendNumber('4')">4</button>
+            <button class="number-button" onclick="appendNumber('5')">5</button>
+            <button class="number-button" onclick="appendNumber('6')">6</button>
+        </div>
+        <br>
+        <div class="third-row">
+            <button class="number-button" onclick="appendNumber('7')">7</button>
+            <button class="number-button" onclick="appendNumber('8')">8</button>
+            <button class="number-button" onclick="appendNumber('9')">9</button>
+        </div>
+        <br>
+        <div class="fourth-row">
+            <button class="number-button" onclick="appendNumber('0')">0</button>
+            <button class="number-button" onclick="appendNumber('.')">.</button>
+    </div>
+    -->
+    <h3>Result</h3><p class="result"></p>
+   
     
 <script src="./debug_code.js"></script>
 </body>
