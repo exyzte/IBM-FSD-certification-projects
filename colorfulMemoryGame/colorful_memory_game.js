@@ -28,9 +28,9 @@ function shuffle(array) {
     return array;
 }
 
-function handleClickEvent(event) {
+function handleCardClick(event) {
     const card = event.target;
-    if(!card.classList.contains('card') || card.classList.contains('matched')) {
+    if (!card.classList.contains('card') || card.classList.contains('matched')) {
         return;
     }
     card.textContent = card.dataset.color;
@@ -42,8 +42,10 @@ function handleClickEvent(event) {
 }
 
 function checkMatch() {
+    debugger;
     const [card1, card2] = selectedCards;
-    if (card1.datase.color === card2.dataset.color) {
+    console.log(selectedCards);
+    if (card1.dataset.color === card2.dataset.color) {
         card1.classList.add('matched');
         card2.classList.add('matched');
         score += 2;
@@ -53,9 +55,8 @@ function checkMatch() {
         card1.textContent = '?';
         card2.textContent = '?';
         card1.style.backgroundColor = '#ddd';
-        card1.style.backgroundColor = '#ddd';
+        card2.style.backgroundColor = '#ddd';
     }
-
     selectedCards = [];
 }
 
