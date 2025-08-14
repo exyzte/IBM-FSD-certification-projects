@@ -1,0 +1,28 @@
+{
+    "articles": [
+    {
+        "title": "Breaking News: Colombian Peso Gains Strength",
+        "description": "The Colombian peso has shown significant strength, becoming one of the best performing currencies across the globe",
+        "source": "https://www.example.com/colombian-peso-news",
+        "image_url": "https://cdn.inspenet.com/wp-content/uploads/2023/04/19035715/1682-peso-colombiano-Shutterstock_portada-624x661.jpg",
+        "publication_date": ": 08/14/2025",
+        "content": "The Colombian peso has shown significant strength, becoming one of the best performing currencies across the globe. This surge is attributed to various factors including economic reforms, increased foreign investment, and a stable political environment. Analysts predict that if these trends continue, the peso could maintain its upward trajectory, benefiting both local and international investors."
+    },
+    {
+        "title": "The white house accepts changes in the H-1B visa program",
+        "description": "La Oficina de Información y Asuntos Regulatorios de la Casa Blanca (OIRA) ha aprobado un cambio propuesto en la forma en que los Servicios de Ciudadanía e Inmigración de Estados Unidos (USCIS) gestionan las visas H-1B, asegura un informe.",
+        "source": "https://www.msn.com/es-co/noticias/other/la-casa-blanca-aprueba-cambios-en-el-programa-de-visas-h-1b-lo-que-debes-saber/ar-AA1KtjMz",
+        "image_url": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1KtmkH.img?w=534&h=356&m=6",
+        "publication_date": ": 08/13/2025",
+        "content": "La Oficina de Información y Asuntos Regulatorios de la Casa Blanca (OIRA) ha aprobado un cambio propuesto en la forma en que los Servicios de Ciudadanía e Inmigración de Estados Unidos (USCIS) gestionan las visas H-1B, asegura un informe."
+    },
+    {
+        "title": "The \"godfather of AI\" reveals the only way humanity can survive superintelligent AI",
+        "description": "The Colombian peso has shown significant strength, becoming one of the best performing currencies across the globe",
+        "source": "https://www.example.com/colombian-peso-news",
+        "image_url": "https://cdn.inspenet.com/wp-content/uploads/2023/04/19035715/1682-peso-colombiano-Shutterstock_portada-624x661.jpg",
+        "publication_date": "Published: 08/14/2025",
+        "content": "The Colombian peso has shown significant strength, \nbecoming one of the best performing currencies across the globe. This surge is attributed to various factors including economic reforms, increased foreign investment, and a stable political environment. Analysts predict that if these trends continue, the peso could maintain its upward trajectory, benefiting both local and international investors."
+    }
+    ]
+}
