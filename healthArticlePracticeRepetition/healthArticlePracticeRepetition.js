@@ -22,9 +22,9 @@ xhr.onload = () => {
             waysHeader.textContent = 'Ways to achieve';
 
             var waysList = document.createElement('ul');
-            article.ways_to_achieve.forEach(way => {
+            article.ways_to_achieve.forEach(function(way) {
                 var listItem = document.createElement('li');
-                listItem.texContent = way;
+                listItem.textContent = way;
                 waysList.appendChild(listItem);
             });
             
