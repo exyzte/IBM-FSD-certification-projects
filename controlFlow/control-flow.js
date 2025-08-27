@@ -47,3 +47,27 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Auntenthicated" : "Not autenthicated";
 
 console.log("Aunthentication Status: ", authenticationStatus);
+
+let typeOfUser = "Subscriber";
+let servicesAccess = [];
+
+switch(typeOfUser) {
+    case "Employee":
+        servicesAccess = ["Dietary Services", "Food Discounts", "Ace Points"];
+        break;
+    case "Enrolled Member":
+        servicesAccess = ["Dietary Services", "Food Market Gift Card", "One-on-one interaction with a dietician", "Personalized App"];
+        break;
+    case "Subscriber":
+        servicesAccess = ["Dietary Services", "Food Market Gift Card"];
+        break;
+    case "Non-Subscriber":
+         servicesAccess = "You need to subscribe to avail this facility";
+        break;
+    default:
+        servicesAccess = "Please create sign up to get started";
+}   
+
+console.log("You have access to: " + servicesAccess.map(item => {
+    return ' ' + item;
+}));
